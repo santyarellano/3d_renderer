@@ -176,9 +176,9 @@ void render(void)
         triangle_t triangle = triangles_to_render[i];
 
         // draw vertex points
-        draw_rect(triangle.points[0].x, triangle.points[0].y, 3, 3, 0xFF22AA33);
+        /*draw_rect(triangle.points[0].x, triangle.points[0].y, 3, 3, 0xFF22AA33);
         draw_rect(triangle.points[1].x, triangle.points[1].y, 3, 3, 0xFF22AA33);
-        draw_rect(triangle.points[2].x, triangle.points[2].y, 3, 3, 0xFF22AA33);
+        draw_rect(triangle.points[2].x, triangle.points[2].y, 3, 3, 0xFF22AA33);*/
 
         // draw unfilled faces
         draw_triangle(
