@@ -43,7 +43,7 @@ bool setup(void)
 
     // loads the cube values in the mesh data structure
     // load_cube_mesh_data();
-    load_obj_file_data("./assets/f22.obj");
+    load_obj_file_data("./assets/cube.obj");
 
     return true;
 }
@@ -131,7 +131,11 @@ void update(void)
 
         vec3_t vec_ab = vec3_sub(vec_b, vec_a);     // B-A
         vec3_t vec_ac = vec3_sub(vec_c, vec_a);     // C-A
+        vec3_normalize(&vec_ab);
+        vec3_normalize(&vec_ac);
+        
         vec3_t normal = vec3_cross(vec_ab, vec_ac); // Use cross prod to find perpendicular
+        vec3_normalize(&normal);    // normalize normal vector
 
         vec3_t cam_ray = vec3_sub(camera_pos, vec_a); // Camera ray to vec A
 
